@@ -1,0 +1,15 @@
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\Cadastro_series.exe
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\Cadastro_series.deps.json
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\Cadastro_series.runtimeconfig.json
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\Cadastro_series.dll
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\ref\Cadastro_series.dll
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\bin\Debug\net6.0\Cadastro_series.pdb
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.csproj.AssemblyReference.cache
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.AssemblyInfoInputs.cache
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.AssemblyInfo.cs
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.csproj.CoreCompileInputs.cache
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.dll
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\ref\Cadastro_series.dll
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.pdb
+C:\Users\Win10\Documents\Projeto_ Cadastro_Series\Cadastro_series\obj\Debug\net6.0\Cadastro_series.genruntimeconfig.cache
