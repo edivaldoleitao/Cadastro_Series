@@ -11,6 +11,7 @@ Fachada fachada = new Fachada(seriesrep);
 
 while (opcao != "X")
 {
+    System.Console.WriteLine("Cadastro de séries");
     System.Console.WriteLine("Informe a opção desejada: ");
     System.Console.WriteLine("1 - Listar Séries");
     System.Console.WriteLine("2 - Inserir nova série");
