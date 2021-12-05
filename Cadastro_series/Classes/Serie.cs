@@ -4,7 +4,7 @@ namespace Cadastro_series.Classes
 {
     public class Serie : EntidadeBase
     {
-        private Genero Genero { get; set; }
+        public Genero Genero { get; protected set; }
         public string Titulo { get; protected set; }
 
         private string Descricao { get; set; }
@@ -12,8 +12,10 @@ namespace Cadastro_series.Classes
         private int Ano { get; set; }
         public bool Excluido { get; set; }
 
+        public double Nota { get; set; }
 
-        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
+
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano, int nota)
         {
             this.Id = id;
             this.Genero = genero;
@@ -21,6 +23,7 @@ namespace Cadastro_series.Classes
             this.Descricao = descricao;
             this.Ano = ano;
             this.Excluido = false;
+            this.Nota = nota;
         }
 
 
@@ -31,6 +34,7 @@ namespace Cadastro_series.Classes
             retorno += "Gênero: " + this.Genero + Environment.NewLine;
             retorno += "Descricao: " + this.Descricao + Environment.NewLine;
             retorno += "Ano: " + this.Ano + Environment.NewLine;
+            retorno += "Nota: " + this.Nota + Environment.NewLine;
             return retorno;
         }
 

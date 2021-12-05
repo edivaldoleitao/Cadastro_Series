@@ -65,8 +65,14 @@ namespace Cadastro_series.Classes
 
                 System.Console.WriteLine("insira o ano da série:");
                 ano = int.Parse(System.Console.ReadLine());
+                int nota = -1;
+                while (nota < 0 || nota > 10)
+                {
+                    System.Console.WriteLine("Avalie a série com uma nota entre 0~10");
+                    nota = int.Parse(System.Console.ReadLine());
+                }
 
-                Serie serie = new Serie(this.rep.ProximoId(), (Genero)genero, titulo, descricao, ano);
+                Serie serie = new Serie(this.rep.ProximoId(), (Genero)genero, titulo, descricao, ano, nota);
 
                 this.rep.Insere(serie);
                 System.Console.WriteLine("Série inserida !");
@@ -157,7 +163,14 @@ namespace Cadastro_series.Classes
                 System.Console.WriteLine("insira o ano da série:");
                 ano = int.Parse(System.Console.ReadLine());
 
-                Serie serie = new Serie(this.rep.ProximoId(), (Genero)genero, titulo, descricao, ano);
+                int nota = -1;
+                while (nota < 0 || nota > 10)
+                {
+                    System.Console.WriteLine("Avalie a série com uma nota entre 0~10");
+                    nota = int.Parse(System.Console.ReadLine());
+                }
+
+                Serie serie = new Serie(this.rep.ProximoId(), (Genero)genero, titulo, descricao, ano, nota);
 
                 System.Console.WriteLine("insira o valor do Id da série a ser atualizada");
                 id = int.Parse(System.Console.ReadLine());
@@ -171,6 +184,113 @@ namespace Cadastro_series.Classes
                 System.Console.WriteLine("Erro na Atualização");
             }
         }
+
+        public void ExibirPorNota()
+        {
+            try
+            {
+                if (this.rep.Rep().Count > 0)
+                {
+                    System.Console.WriteLine("1 - Exibir as séries melhor Avaliadas");
+                    System.Console.WriteLine("2 - Exibir as séries pior avaliadas");
+
+                    int opcao = int.Parse(System.Console.ReadLine());
+
+
+                    switch (opcao)
+                    {
+                        case 1:
+                            var lista = this.rep.Rep().Where(x => x.Nota > 7);
+
+                            foreach (Serie item in lista)
+                            {
+                                System.Console.WriteLine($"Id: {item.Id} - Título: {item.Titulo} - Nota: {item.Nota}");
+                            }
+                            break;
+
+                        case 2:
+                            var lista2 = this.rep.Rep().Where(x => x.Nota < 3);
+
+                            foreach (Serie item in lista2)
+                            {
+                                System.Console.WriteLine($"Id: {item.Id} - Título: {item.Titulo} - Nota: {item.Nota}");
+                            }
+                            break;
+
+                        default:
+                            System.Console.WriteLine("opção inválida");
+                            break;
+                    }
+                }
+                else
+                {
+                    System.Console.WriteLine("Lista vazia!!");
+                }
+
+            }
+            catch (Exception e)
+            {
+                var msg = e.Message;
+                System.Console.WriteLine("Erro ao exibir!!");
+            }
+
+        }
+
+
+
+
+        public void ExibirPorGenero()
+        {
+            try
+            {
+                if (this.rep.Rep().Count() > 0)
+                {
+                    var myEnumMemberCount = Enum.Genero.GetNames(typeof(Genero)).Length;
+                    int opcao = 0;
+
+                    System.Console.WriteLine("Escolha entre os Gêneros disponíveis:");
+                    for (int i = 1; i < myEnumMemberCount; i++)
+                    {
+                        System.Console.WriteLine($"{i} - {(Genero)i}");
+                    }
+
+                    while (opcao == 0 || opcao > myEnumMemberCount || opcao < 1)
+                    {
+                        System.Console.WriteLine("digite uma opção válida:");
+                        opcao = int.Parse(Console.ReadLine());
+                    }
+
+                    var lista = this.rep.Rep().Where(x => x.Excluido == false || x.Genero == (Genero)opcao);
+
+                    if (lista.Count() > 0)
+                    {
+                        foreach (Serie item in lista)
+                        {
+                            System.Console.WriteLine($"Id: {item.Titulo} - Título: {item.Titulo}");
+                        }
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Não existem séries desse gênero!!");
+                    }
+
+                }
+                else
+                {
+                    System.Console.WriteLine("lista de séries vazia !!");
+                }
+
+            }
+            catch (Exception e)
+            {
+                var msg = e.Message;
+                System.Console.WriteLine("Erro ao listar as séries!!");
+            }
+
+        }
+
+
+
 
     }
 }

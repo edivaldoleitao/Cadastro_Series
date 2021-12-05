@@ -1,8 +1,9 @@
 ﻿using Cadastro_series.Classes;
-using Cadastro_series.Enum;
+
 
 #pragma warning disable CS8602
 
+// exibir por genero
 string opcao = string.Empty;
 
 
@@ -11,6 +12,7 @@ Fachada fachada = new Fachada(seriesrep);
 
 while (opcao != "X")
 {
+    System.Console.WriteLine("");
     System.Console.WriteLine("Cadastro de séries");
     System.Console.WriteLine("Informe a opção desejada: ");
     System.Console.WriteLine("1 - Listar Séries");
@@ -18,6 +20,8 @@ while (opcao != "X")
     System.Console.WriteLine("3 - Atualizar Série");
     System.Console.WriteLine("4 - Excluir Série");
     System.Console.WriteLine("5 - Exibir Série");
+    System.Console.WriteLine("6 - Listar séries por nota");
+    System.Console.WriteLine("7 - exibir por gênero");
     System.Console.WriteLine("C - Limpar Tela");
     System.Console.WriteLine("X - Sair");
 
@@ -41,6 +45,13 @@ while (opcao != "X")
             break;
         case "5":
             fachada.ExibirSerie();
+            break;
+        case "6":
+            fachada.ExibirPorNota();
+            break;
+
+        case "7":
+            fachada.ExibirPorGenero();
             break;
         case "C":
             Console.Clear();
